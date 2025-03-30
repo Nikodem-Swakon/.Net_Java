@@ -18,7 +18,7 @@ namespace WebApplication2.Services
             _apiKey = configuration["YouTubeApiKey"] ?? throw new ArgumentNullException("YouTube API Key is missing!");
         }
 
-        // ✅ Metoda asynchroniczna do wyszukiwania filmów po zapytaniu tekstowym
+        //  Metoda asynchroniczna do wyszukiwania filmów po zapytaniu tekstowym
         public async Task<List<Video>> SearchVideosAsync(string query)
         {
             // Inicjalizacja klienta YouTube API
@@ -31,7 +31,7 @@ namespace WebApplication2.Services
             // Tworzymy zapytanie typu "search" z parametrami
             var searchRequest = youtubeService.Search.List("snippet");
             searchRequest.Q = query;              // zapytanie wpisane przez użytkownika
-            searchRequest.MaxResults = 5;         // liczba wyników
+            searchRequest.MaxResults = 5;         // liczba wyników 
 
             // Wysyłamy zapytanie do API
             var searchResponse = await searchRequest.ExecuteAsync();
