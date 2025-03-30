@@ -81,6 +81,8 @@ namespace WebApplication2.Controllers
             var favoriteVideos = _context.Videos.Where(v => v.IsFavorite).ToList(); // tylko te, które są oznaczone jako ulubione
             return View(favoriteVideos);
         }
+
+        
     }
 }
 
