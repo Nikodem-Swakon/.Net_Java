@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Wyszukiwanie w YouTube";
+}
+
+<!-- Nagłówek strony -->
+<h2>🔍 Wyszukaj wideo na YouTube</h2>
+
+<!-- Formularz do wpisania zapytania i wysłania go do kontrolera -->
+<form asp-controller="YouTube" asp-action="Search" method="post">
+    <!-- Pole tekstowe na zapytanie -->
+    <input type="text" name="query" class="form-control" placeholder="Wpisz zapytanie..." required />
+
+    <!-- Przycisk do wyszukiwania -->
+    <button type="submit" class="btn btn-primary mt-2">🔎 Szukaj</button>
+</form>

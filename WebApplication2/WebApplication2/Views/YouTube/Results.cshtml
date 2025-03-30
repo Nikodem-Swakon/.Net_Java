@@ -1,0 +1,49 @@
+@model List<WebApplication2.Models.Video>
+
+@{
+    ViewData["Title"] = "Wyniki wyszukiwania";
+}
+
+<!-- Nagłówek strony -->
+<h2>📺 Znalezione filmy</h2>
+
+<div class="container">
+    <div class="row">
+        @foreach (var video in Model)
+        {
+            // Pobieramy listę ID filmów już dodanych do ulubionych
+            var isFavorite = ViewData["Favorites"] as List<string> ?? new List<string>();
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <!-- Podgląd filmu z YouTube -->
+                    <iframe class="card-img-top" width="100%" height="200" 
+                            src="https://www.youtube.com/embed/@video.VideoId" 
+                            frameborder="0" allowfullscreen>
+                    </iframe>
+
+                    <div class="card-body text-center">
+                        <h6 class="card-title">@video.Title</h6>
+
+                        @if (!isFavorite.Contains(video.VideoId))
+                        {
+                            <!-- Formularz dodania do ulubionych -->
+                            <form asp-controller="YouTube" asp-action="AddToFavorites" method="post">
+                                <input type="hidden" name="videoId" value="@video.VideoId" />
+                                <input type="hidden" name="title" value="@video.Title" />
+                                <input type="hidden" name="channelId" value="@video.ChannelId" />
+                                <input type="hidden" name="publishedAt" value="@video.PublishedAt" />
+                                <button type="submit" class="btn btn-warning mt-2">⭐ Dodaj do ulubionych</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <!-- Jeśli już w ulubionych -->
+                            <button class="btn btn-success mt-2" disabled>✅ W ulubionych</button>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
