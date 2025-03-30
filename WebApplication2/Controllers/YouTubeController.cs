@@ -55,10 +55,8 @@ namespace WebApplication2.Controllers
                 await _context.SaveChangesAsync();
             }
 
-            // ⚠️ Uwaga: ten fragment powoduje załadowanie tylko części wyników (dla jednego tytułu)
-            // Można tu zamiast tego zrobić RedirectToAction z query
-            var videos = await _youTubeApiService.SearchVideosAsync(title);
-            return View("Results", videos);
+            // Zwracamy JSON z id filmu, który właśnie został dodany (żeby przycisk działał od razu)
+            return Json(new { VideoId = videoId, IsFavorite = true });
         }
 
         // Usuwanie filmu z ulubionych

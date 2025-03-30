@@ -28,7 +28,7 @@
                         @if (!isFavorite.Contains(video.VideoId))
                         {
                             <!-- Formularz dodania do ulubionych -->
-                            <form asp-controller="YouTube" asp-action="AddToFavorites" method="post">
+                            <form id="add-to-favorites-form-@video.VideoId" asp-controller="YouTube" asp-action="AddToFavorites" method="post" class="add-to-favorites-form">
                                 <input type="hidden" name="videoId" value="@video.VideoId" />
                                 <input type="hidden" name="title" value="@video.Title" />
                                 <input type="hidden" name="channelId" value="@video.ChannelId" />
@@ -47,3 +47,28 @@
         }
     </div>
 </div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // AJAX request to add video to favorites
+        $(".add-to-favorites-form").submit(function (e) {
+            e.preventDefault(); // prevent form submission
+
+            var form = $(this);
+            $.ajax({
+                type: "POST",
+                url: form.attr("action"),
+                data: form.serialize(),
+                success: function (response) {
+                    // Find the button and update it
+                    var button = form.find("button");
+                    button.replaceWith('<button class="btn btn-success mt-2" disabled>✅ W ulubionych</button>');
+                },
+                error: function () {
+                    alert("Error adding to favorites.");
+                }
+            });
+        });
+    </script>
+}
