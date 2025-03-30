@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h9ca/D7GJCw=",
+  "dgSpecHash": "G73oCKg0wJA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+  "projectFilePath": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin-Niko\\.nuget\\packages\\google.apis\\1.69.0\\google.apis.1.69.0.nupkg.sha512",
     "C:\\Users\\Admin-Niko\\.nuget\\packages\\google.apis.auth\\1.69.0\\google.apis.auth.1.69.0.nupkg.sha512",
