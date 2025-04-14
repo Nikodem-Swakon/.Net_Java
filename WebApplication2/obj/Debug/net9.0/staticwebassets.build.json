@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SyQ1EWHn89gbtHHkGuOMjwtRbmagvMAu8tP4T3Hka6I=",
+  "Hash": "RT5YciR/cGYcbtCkQKk/GOG++gtvTMsUGLChqi4QgjA=",
   "Source": "WebApplication2",
   "BasePath": "_content/WebApplication2",
   "Mode": "Default",
@@ -542,12 +542,12 @@
       "OriginalItemSpec": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\fp9il18uij-jkumwdaik3.gz",
+      "Identity": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\fp9il18uij-r3lnqb1i7l.gz",
       "SourceId": "WebApplication2",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/WebApplication2",
-      "RelativePath": "WebApplication2#[.{fingerprint=jkumwdaik3}]?.styles.css.gz",
+      "RelativePath": "WebApplication2#[.{fingerprint=r3lnqb1i7l}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -556,8 +556,8 @@
       "RelatedAsset": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WebApplication2.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "t3k8i2kldx",
-      "Integrity": "N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0=",
+      "Fingerprint": "tcofjwaxhr",
+      "Integrity": "84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WebApplication2.styles.css"
@@ -794,12 +794,12 @@
       "OriginalItemSpec": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\lohozebfj0-jkumwdaik3.gz",
+      "Identity": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\lohozebfj0-r3lnqb1i7l.gz",
       "SourceId": "WebApplication2",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/WebApplication2",
-      "RelativePath": "WebApplication2#[.{fingerprint=jkumwdaik3}]!.bundle.scp.css.gz",
+      "RelativePath": "WebApplication2#[.{fingerprint=r3lnqb1i7l}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -808,8 +808,8 @@
       "RelatedAsset": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WebApplication2.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "t3k8i2kldx",
-      "Integrity": "N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0=",
+      "Fingerprint": "tcofjwaxhr",
+      "Integrity": "84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WebApplication2.bundle.scp.css"
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "jkumwdaik3",
-      "Integrity": "Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY=",
+      "Fingerprint": "r3lnqb1i7l",
+      "Integrity": "l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WebApplication2.styles.css"
@@ -1396,8 +1396,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "jkumwdaik3",
-      "Integrity": "Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY=",
+      "Fingerprint": "r3lnqb1i7l",
+      "Integrity": "l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WebApplication2.bundle.scp.css"
@@ -21287,7 +21287,7 @@
     },
     {
       "Route": "WebApplication2.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\lohozebfj0-jkumwdaik3.gz",
+      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\lohozebfj0-r3lnqb1i7l.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -21306,11 +21306,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0=\""
+          "Value": "\"84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:59:42 GMT"
+          "Value": "Mon, 14 Apr 2025 10:32:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21330,13 +21330,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY=\""
+          "Value": "W/\"l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY="
+          "Value": "sha256-l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc="
         }
       ]
     },
@@ -21359,11 +21359,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY=\""
+          "Value": "\"l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:59:42 GMT"
+          "Value": "Mon, 14 Apr 2025 10:32:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21373,13 +21373,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY="
+          "Value": "sha256-l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc="
         }
       ]
     },
     {
       "Route": "WebApplication2.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\lohozebfj0-jkumwdaik3.gz",
+      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\lohozebfj0-r3lnqb1i7l.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21396,11 +21396,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0=\""
+          "Value": "\"84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:59:42 GMT"
+          "Value": "Mon, 14 Apr 2025 10:32:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21418,13 +21418,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0="
+          "Value": "sha256-84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg="
         }
       ]
     },
     {
-      "Route": "WebApplication2.jkumwdaik3.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\lohozebfj0-jkumwdaik3.gz",
+      "Route": "WebApplication2.r3lnqb1i7l.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\lohozebfj0-r3lnqb1i7l.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -21443,11 +21443,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0=\""
+          "Value": "\"84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:59:42 GMT"
+          "Value": "Mon, 14 Apr 2025 10:32:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21467,13 +21467,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY=\""
+          "Value": "W/\"l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jkumwdaik3"
+          "Value": "r3lnqb1i7l"
         },
         {
           "Name": "label",
@@ -21481,12 +21481,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY="
+          "Value": "sha256-l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc="
         }
       ]
     },
     {
-      "Route": "WebApplication2.jkumwdaik3.bundle.scp.css",
+      "Route": "WebApplication2.r3lnqb1i7l.bundle.scp.css",
       "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WebApplication2.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21504,11 +21504,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY=\""
+          "Value": "\"l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:59:42 GMT"
+          "Value": "Mon, 14 Apr 2025 10:32:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21518,7 +21518,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jkumwdaik3"
+          "Value": "r3lnqb1i7l"
         },
         {
           "Name": "label",
@@ -21526,13 +21526,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY="
+          "Value": "sha256-l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc="
         }
       ]
     },
     {
-      "Route": "WebApplication2.jkumwdaik3.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\lohozebfj0-jkumwdaik3.gz",
+      "Route": "WebApplication2.r3lnqb1i7l.bundle.scp.css.gz",
+      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\lohozebfj0-r3lnqb1i7l.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21549,11 +21549,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0=\""
+          "Value": "\"84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:59:42 GMT"
+          "Value": "Mon, 14 Apr 2025 10:32:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21571,7 +21571,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jkumwdaik3"
+          "Value": "r3lnqb1i7l"
         },
         {
           "Name": "label",
@@ -21579,13 +21579,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0="
+          "Value": "sha256-84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg="
         }
       ]
     },
     {
-      "Route": "WebApplication2.jkumwdaik3.styles.css",
-      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\fp9il18uij-jkumwdaik3.gz",
+      "Route": "WebApplication2.r3lnqb1i7l.styles.css",
+      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\fp9il18uij-r3lnqb1i7l.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -21604,11 +21604,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0=\""
+          "Value": "\"84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:59:42 GMT"
+          "Value": "Mon, 14 Apr 2025 10:32:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21628,13 +21628,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY=\""
+          "Value": "W/\"l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jkumwdaik3"
+          "Value": "r3lnqb1i7l"
         },
         {
           "Name": "label",
@@ -21642,12 +21642,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY="
+          "Value": "sha256-l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc="
         }
       ]
     },
     {
-      "Route": "WebApplication2.jkumwdaik3.styles.css",
+      "Route": "WebApplication2.r3lnqb1i7l.styles.css",
       "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WebApplication2.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21665,11 +21665,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY=\""
+          "Value": "\"l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:59:42 GMT"
+          "Value": "Mon, 14 Apr 2025 10:32:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21679,7 +21679,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jkumwdaik3"
+          "Value": "r3lnqb1i7l"
         },
         {
           "Name": "label",
@@ -21687,13 +21687,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY="
+          "Value": "sha256-l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc="
         }
       ]
     },
     {
-      "Route": "WebApplication2.jkumwdaik3.styles.css.gz",
-      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\fp9il18uij-jkumwdaik3.gz",
+      "Route": "WebApplication2.r3lnqb1i7l.styles.css.gz",
+      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\fp9il18uij-r3lnqb1i7l.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21710,11 +21710,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0=\""
+          "Value": "\"84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:59:42 GMT"
+          "Value": "Mon, 14 Apr 2025 10:32:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21732,7 +21732,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jkumwdaik3"
+          "Value": "r3lnqb1i7l"
         },
         {
           "Name": "label",
@@ -21740,13 +21740,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0="
+          "Value": "sha256-84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg="
         }
       ]
     },
     {
       "Route": "WebApplication2.styles.css",
-      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\fp9il18uij-jkumwdaik3.gz",
+      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\fp9il18uij-r3lnqb1i7l.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -21765,11 +21765,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0=\""
+          "Value": "\"84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:59:42 GMT"
+          "Value": "Mon, 14 Apr 2025 10:32:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21789,13 +21789,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY=\""
+          "Value": "W/\"l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY="
+          "Value": "sha256-l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc="
         }
       ]
     },
@@ -21818,11 +21818,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY=\""
+          "Value": "\"l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:59:42 GMT"
+          "Value": "Mon, 14 Apr 2025 10:32:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21832,13 +21832,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Q9gVzXjuL3Mu1iq/rTnq5sln7+ZvYO/KgWDqxeLYkwY="
+          "Value": "sha256-l8B6bqZJiGwWp0V2A06jjrV09sw3/mlsDI8P38eDuGc="
         }
       ]
     },
     {
       "Route": "WebApplication2.styles.css.gz",
-      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\fp9il18uij-jkumwdaik3.gz",
+      "AssetFile": "C:\\Users\\Admin-Niko\\Documents\\_STUDIA\\_Net_Java\\WebApplication2\\WebApplication2\\obj\\Debug\\net9.0\\compressed\\fp9il18uij-r3lnqb1i7l.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21855,11 +21855,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0=\""
+          "Value": "\"84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:59:42 GMT"
+          "Value": "Mon, 14 Apr 2025 10:32:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21877,7 +21877,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-N8794q1NZTrIiLXPMa4IGtzaxpEnrBbyUL9spnjDLV0="
+          "Value": "sha256-84NvWqe8khjzIR2JDq+JT5sHXSGH2ijGnMMj1RuUhHg="
         }
       ]
     }

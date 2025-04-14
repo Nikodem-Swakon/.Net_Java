@@ -4,6 +4,7 @@ using WebApplication2.Models;
 using WebApplication2.Services;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication2.Controllers
 {
@@ -37,27 +38,43 @@ namespace WebApplication2.Controllers
 
         // Dodawanie filmu do ulubionych (zapis do bazy)
         [HttpPost]
-        public async Task<IActionResult> AddToFavorites(string videoId, string title, string channelId, DateTime publishedAt)
+public async Task<IActionResult> AddToFavorites(string videoId, string title, string channelId, DateTime publishedAt)
+{
+    // Załóżmy, że domyślny profil ma ID 1. Możesz dostosować ten kod do swojej logiki.
+    var defaultProfile = await _context.Profiles.FirstOrDefaultAsync(); // Pobieramy domyślny profil
+    
+    if (defaultProfile == null)
+    {
+        // Jeśli nie ma profilu, tworzymy nowy (przykładowy)
+        defaultProfile = new Profile
         {
-            // Jeśli tego filmu nie ma jeszcze w bazie, dodajemy
-            if (!_context.Videos.Any(v => v.VideoId == videoId))
-            {
-                var favoriteVideo = new Video
-                {
-                    VideoId = videoId,
-                    Title = title,
-                    ChannelId = channelId,
-                    PublishedAt = publishedAt,
-                    IsFavorite = true
-                };
+            Name = "Default Profile" // Lub jakiekolwiek dane chcesz ustawić
+        };
+        _context.Profiles.Add(defaultProfile);
+        await _context.SaveChangesAsync(); // Zapisz profil w bazie
+    }
 
-                _context.Videos.Add(favoriteVideo);
-                await _context.SaveChangesAsync();
-            }
+    // Jeśli tego filmu nie ma jeszcze w bazie, dodajemy
+    if (!_context.Videos.Any(v => v.VideoId == videoId))
+    {
+        var favoriteVideo = new Video
+        {
+            VideoId = videoId,
+            Title = title,
+            ChannelId = channelId,
+            PublishedAt = publishedAt,
+            IsFavorite = true,
+            ProfileId = defaultProfile.Id // Przypisujemy domyślny profil do filmu
+        };
 
-            // Zwracamy JSON z id filmu, który właśnie został dodany (żeby przycisk działał od razu)
-            return Json(new { VideoId = videoId, IsFavorite = true });
-        }
+        _context.Videos.Add(favoriteVideo);
+        await _context.SaveChangesAsync();
+    }
+
+    // Zwracamy JSON z id filmu, który właśnie został dodany (żeby przycisk działał od razu)
+    return Json(new { VideoId = videoId, IsFavorite = true });
+}
+
 
         // Usuwanie filmu z ulubionych
         [HttpPost]

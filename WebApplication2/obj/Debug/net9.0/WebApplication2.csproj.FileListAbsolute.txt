@@ -892,8 +892,8 @@ C:\Users\Admin-Niko\Documents\_STUDIA\_Net_Java\WebApplication2\WebApplication2\
 C:\Users\Admin-Niko\Documents\_STUDIA\_Net_Java\WebApplication2\WebApplication2\obj\Debug\net9.0\compressed\stuenhrmdh-9vr69e8ynj.gz
 C:\Users\Admin-Niko\Documents\_STUDIA\_Net_Java\WebApplication2\WebApplication2\obj\Debug\net9.0\compressed\nwsiqbdq0w-87fc7y1x7t.gz
 C:\Users\Admin-Niko\Documents\_STUDIA\_Net_Java\WebApplication2\WebApplication2\obj\Debug\net9.0\compressed\io2xxcf46y-mlv21k5csn.gz
-C:\Users\Admin-Niko\Documents\_STUDIA\_Net_Java\WebApplication2\WebApplication2\obj\Debug\net9.0\compressed\fp9il18uij-jkumwdaik3.gz
-C:\Users\Admin-Niko\Documents\_STUDIA\_Net_Java\WebApplication2\WebApplication2\obj\Debug\net9.0\compressed\lohozebfj0-jkumwdaik3.gz
+C:\Users\Admin-Niko\Documents\_STUDIA\_Net_Java\WebApplication2\WebApplication2\obj\Debug\net9.0\compressed\fp9il18uij-r3lnqb1i7l.gz
+C:\Users\Admin-Niko\Documents\_STUDIA\_Net_Java\WebApplication2\WebApplication2\obj\Debug\net9.0\compressed\lohozebfj0-r3lnqb1i7l.gz
 C:\Users\Admin-Niko\Documents\_STUDIA\_Net_Java\WebApplication2\WebApplication2\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\Admin-Niko\Documents\_STUDIA\_Net_Java\WebApplication2\WebApplication2\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\Admin-Niko\Documents\_STUDIA\_Net_Java\WebApplication2\WebApplication2\obj\Debug\net9.0\staticwebassets.build.endpoints.json
