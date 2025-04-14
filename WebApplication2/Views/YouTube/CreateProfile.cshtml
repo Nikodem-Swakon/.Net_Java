@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Utwórz nowy profil";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" asp-action="CreateProfile">
+    <div class="form-group">
+        <label for="profileName">Nazwa profilu</label>
+        <input type="text" class="form-control" id="profileName" name="profileName" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Utwórz profil</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
+

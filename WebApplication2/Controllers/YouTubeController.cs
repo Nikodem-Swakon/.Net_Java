@@ -13,6 +13,43 @@ namespace WebApplication2.Controllers
         private readonly YouTubeApiService _youTubeApiService;
         private readonly ApplicationDbContext _context;
 
+
+
+        // Akcja do utworzenia nowego profilu
+    [HttpPost]
+    public async Task<IActionResult> CreateProfile(string profileName)
+    {
+        if (string.IsNullOrWhiteSpace(profileName))
+        {
+            // Jeśli nazwa jest pusta, zwrócimy błąd
+            ModelState.AddModelError("", "Nazwa profilu nie może być pusta.");
+            return View();
+        }
+
+        // Sprawdzamy, czy profil o tej nazwie już istnieje
+        if (_context.Profiles.Any(p => p.Name == profileName))
+        {
+            ModelState.AddModelError("", "Profil o tej nazwie już istnieje.");
+            return View();
+        }
+
+        // Tworzymy nowy profil
+        var newProfile = new Profile
+        {
+            Name = profileName
+        };
+
+        // Dodajemy profil do bazy danych
+        _context.Profiles.Add(newProfile);
+        await _context.SaveChangesAsync();
+
+        // Możesz przekierować użytkownika na stronę profili lub inne miejsce
+        return RedirectToAction("Index", "YouTube");
+    }
+
+
+
+
         // Konstruktor: wstrzykiwanie serwisów (API YouTube i baza danych)
         public YouTubeController(YouTubeApiService youTubeApiService, ApplicationDbContext context)
         {
@@ -25,6 +62,12 @@ namespace WebApplication2.Controllers
         {
             return View();
         }
+
+        public IActionResult CreateProfile()
+        {
+            return View();
+        }
+
 
         // Wyszukiwanie filmów z YouTube na podstawie zapytania
         public async Task<IActionResult> Search(string query)
