@@ -2,6 +2,8 @@
 
 @{
     ViewData["Title"] = "Wyniki wyszukiwania";
+    var profiles = ViewData["Profiles"] as List<WebApplication2.Models.Profile> ?? new();
+    var selectedProfileId = ViewData["SelectedProfileId"] as int?;
 }
 
 <!-- Nagłówek strony -->
@@ -12,7 +14,7 @@
         @foreach (var video in Model)
         {
             var isFavorite = ViewData["Favorites"] as List<string> ?? new List<string>();
-            var profiles = ViewData["Profiles"] as List<WebApplication2.Models.Profile>;
+            //var profiles = ViewData["Profiles"] as List<WebApplication2.Models.Profile>;
 
             <div class="col-md-4 mb-4">
                 <div class="card">

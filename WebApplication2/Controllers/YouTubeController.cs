@@ -193,12 +193,64 @@ public async Task<IActionResult> AddToFavorites(string videoId, string title, st
         }
 
         // Widok ulubionych filmów
-        public IActionResult Favorites()
-        {
-            var favoriteVideos = _context.Videos.Where(v => v.IsFavorite).ToList(); // tylko te, które są oznaczone jako ulubione
-            return View(favoriteVideos);
-        }
+       public IActionResult Favorites(int? profileId, string searchQuery)
+{
+    var videos = _context.Videos
+        .Where(v => v.IsFavorite)
+        .AsQueryable();
 
+    if (profileId.HasValue)
+    {
+        videos = videos.Where(v => v.ProfileId == profileId.Value);
+    }
+
+    if (!string.IsNullOrEmpty(searchQuery))
+    {
+        videos = videos.Where(v => v.Title.Contains(searchQuery));
+    }
+
+    var resultList = videos.ToList();
+    var profiles = _context.Profiles.ToList();
+
+    ViewData["Profiles"] = profiles;
+    ViewData["SelectedProfileId"] = profileId;
+    ViewData["SearchQuery"] = searchQuery;
+
+    return View(resultList);
+}
+
+
+/*public IActionResult Search(string query, int? profileId)
+{
+    var videosQuery = _context.Videos.AsQueryable();
+
+    if (!string.IsNullOrEmpty(query))
+    {
+        videosQuery = videosQuery.Where(v => v.Title.Contains(query));
+    }
+
+    if (profileId.HasValue)
+    {
+        videosQuery = videosQuery.Where(v => v.ProfileId == profileId.Value);
+    }
+
+    var results = videosQuery.ToList();
+
+    var favorites = _context.Videos
+        .Where(v => v.IsFavorite)
+        .Select(v => v.VideoId)
+        .ToList();
+
+    var profiles = _context.Profiles.ToList();
+
+    ViewData["Favorites"] = favorites;
+    ViewData["Profiles"] = profiles;
+    ViewData["SelectedProfileId"] = profileId;
+    ViewData["SearchQuery"] = query;
+
+    return View("Results", results);
+}
+*/
         
     }
 }
