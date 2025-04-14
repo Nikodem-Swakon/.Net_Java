@@ -1,24 +1,54 @@
-@{
-    ViewData["Title"] = "Utwórz nowy profil";
-}
+@model List<WebApplication2.Models.ProfileViewModel>
 
-<h2>@ViewData["Title"]</h2>
+<h2>👤 Zarządzaj profilami</h2>
 
-<form method="post" asp-action="CreateProfile">
-    <div class="form-group">
-        <label for="profileName">Nazwa profilu</label>
-        <input type="text" class="form-control" id="profileName" name="profileName" required />
+<!-- Formularz tworzenia nowego profilu -->
+<div class="card mb-4">
+    <div class="card-header">
+        ➕ Utwórz nowy profil
     </div>
-    <button type="submit" class="btn btn-primary">Utwórz profil</button>
-</form>
+    <div class="card-body">
+        <form method="post" asp-action="CreateProfile">
+            <div class="form-group">
+                <label for="profileName">Nazwa profilu</label>
+                <input type="text" class="form-control" id="profileName" name="profileName" required />
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Utwórz profil</button>
+        </form>
+    </div>
+</div>
 
-@if (!ViewData.ModelState.IsValid)
+<!-- Lista istniejących profili -->
+<h4>📋 Istniejące profile</h4>
+
+@if (Model != null && Model.Any())
 {
-    <div class="alert alert-danger">
-        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
-        {
-            <p>@error.ErrorMessage</p>
-        }
-    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nazwa profilu</th>
+                <th>Liczba zapisanych filmów</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Profile.Name</td>
+                    <td>@item.VideoCount</td>
+                    <td>
+                        <form asp-action="DeleteProfile" method="post" onsubmit="return confirm('Na pewno chcesz usunąć ten profil i wszystkie jego filmy?');">
+                            <input type="hidden" name="profileId" value="@item.Profile.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm">🗑️ Usuń</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
-
+else
+{
+    <p>Brak utworzonych profili.</p>
+}

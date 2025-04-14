@@ -5,6 +5,8 @@ using WebApplication2.Services;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging; 
+
 
 namespace WebApplication2.Controllers
 {
@@ -12,61 +14,118 @@ namespace WebApplication2.Controllers
     {
         private readonly YouTubeApiService _youTubeApiService;
         private readonly ApplicationDbContext _context;
+        private readonly ILogger<YouTubeController> _logger; // Logger do rejestrowania informacji
+
+     public YouTubeController(YouTubeApiService youTubeApiService, ApplicationDbContext context, ILogger<YouTubeController> logger)
+        {
+            _youTubeApiService = youTubeApiService;
+            _context = context;
+            _logger = logger;  // Assigning the injected logger
+        }
+
+
+
+
+        public IActionResult AddToFavoritesForm()
+    {
+        // Pobieramy dostępne profile z bazy
+        var profiles = _context.Profiles.ToList();
+
+        // Przekazujemy je do widoku
+        ViewData["Profiles"] = profiles;
+
+        return View();
+    }
+
+
+public IActionResult ManageProfiles()
+{
+    var profiles = _context.Profiles
+        .Select(p => new WebApplication2.Models.ProfileViewModel
+        {
+            Profile = p,
+            VideoCount = _context.Videos.Count(v => v.ProfileId == p.Id)
+        })
+        .ToList();
+
+        _logger.LogInformation("Profile count: {ProfileCount}", profiles.Count);
+
+    ViewData["Profiles"] = profiles;  // Przypisanie listy profili do ViewData
+    return View();
+}
+
+
+[HttpPost]
+public async Task<IActionResult> DeleteProfile(int profileId)
+{
+    var profile = await _context.Profiles.FindAsync(profileId);
+    if (profile == null)
+        return NotFound();
+
+    // Usuń filmy powiązane z profilem
+    var videos = _context.Videos.Where(v => v.ProfileId == profileId);
+    _context.Videos.RemoveRange(videos);
+
+    _context.Profiles.Remove(profile);
+    await _context.SaveChangesAsync();
+
+    return RedirectToAction("CreateProfile"); // Zamiast RedirectToAction("Index", "YouTube"), przekieruj do ManageProfiles
+}
 
 
 
         // Akcja do utworzenia nowego profilu
-    [HttpPost]
-    public async Task<IActionResult> CreateProfile(string profileName)
+[HttpPost]
+public async Task<IActionResult> CreateProfile(string profileName)
+{
+    if (string.IsNullOrWhiteSpace(profileName))
     {
-        if (string.IsNullOrWhiteSpace(profileName))
-        {
-            // Jeśli nazwa jest pusta, zwrócimy błąd
-            ModelState.AddModelError("", "Nazwa profilu nie może być pusta.");
-            return View();
-        }
-
-        // Sprawdzamy, czy profil o tej nazwie już istnieje
-        if (_context.Profiles.Any(p => p.Name == profileName))
-        {
-            ModelState.AddModelError("", "Profil o tej nazwie już istnieje.");
-            return View();
-        }
-
-        // Tworzymy nowy profil
-        var newProfile = new Profile
-        {
-            Name = profileName
-        };
-
-        // Dodajemy profil do bazy danych
-        _context.Profiles.Add(newProfile);
-        await _context.SaveChangesAsync();
-
-        // Możesz przekierować użytkownika na stronę profili lub inne miejsce
-        return RedirectToAction("Index", "YouTube");
+        ModelState.AddModelError("", "Nazwa profilu nie może być pusta.");
+        return View(); // Jeśli nazwa profilu jest pusta, zwróć widok z błędami
     }
 
+    if (_context.Profiles.Any(p => p.Name == profileName))
+    {
+        ModelState.AddModelError("", "Profil o tej nazwie już istnieje.");
+        return View(); // Jeśli profil o tej nazwie już istnieje, zwróć widok z błędami
+    }
+
+    var newProfile = new Profile
+    {
+        Name = profileName
+    };
+
+    _context.Profiles.Add(newProfile);
+    await _context.SaveChangesAsync();
+
+    return RedirectToAction("CreateProfile"); // Zamiast RedirectToAction("Index", "YouTube"), przekieruj do ManageProfiles
+}
 
 
 
-        // Konstruktor: wstrzykiwanie serwisów (API YouTube i baza danych)
-        public YouTubeController(YouTubeApiService youTubeApiService, ApplicationDbContext context)
-        {
-            _youTubeApiService = youTubeApiService;
-            _context = context;
-        }
 
+
+ 
         // Widok startowy / formularz wyszukiwania
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult CreateProfile()
+public IActionResult CreateProfile()
+{
+    var profiles = _context.Profiles
+        .Select(p => new ProfileViewModel
         {
-            return View();
-        }
+            Profile = p,
+            VideoCount = _context.Videos.Count(v => v.ProfileId == p.Id)
+        })
+        .ToList();
+
+    //ViewData["Profiles"] = profiles;
+    return View(profiles);
+}
+
 
 
         // Wyszukiwanie filmów z YouTube na podstawie zapytania
@@ -74,30 +133,29 @@ namespace WebApplication2.Controllers
         {
             var videos = await _youTubeApiService.SearchVideosAsync(query); // pobranie filmów z API
             var favoriteVideos = _context.Videos.Select(v => v.VideoId).ToList(); // ID ulubionych filmów z bazy
+            var profiles = await _context.Profiles.ToListAsync(); // Pobieramy dostępne profile
+
 
             ViewData["Favorites"] = favoriteVideos; // przekazujemy info do widoku, które filmy są ulubione
+            ViewData["Profiles"] = profiles; // przekazujemy dostępne profile do widoku
+
             return View("Results", videos); // pokazujemy widok wyników
         }
 
         // Dodawanie filmu do ulubionych (zapis do bazy)
-        [HttpPost]
-public async Task<IActionResult> AddToFavorites(string videoId, string title, string channelId, DateTime publishedAt)
+[HttpPost]
+public async Task<IActionResult> AddToFavorites(string videoId, string title, string channelId, DateTime publishedAt, int profileId)
 {
-    // Załóżmy, że domyślny profil ma ID 1. Możesz dostosować ten kod do swojej logiki.
-    var defaultProfile = await _context.Profiles.FirstOrDefaultAsync(); // Pobieramy domyślny profil
-    
-    if (defaultProfile == null)
+    // Sprawdzamy, czy wybrany profil istnieje w bazie
+    var selectedProfile = await _context.Profiles.FindAsync(profileId);
+
+    if (selectedProfile == null)
     {
-        // Jeśli nie ma profilu, tworzymy nowy (przykładowy)
-        defaultProfile = new Profile
-        {
-            Name = "Default Profile" // Lub jakiekolwiek dane chcesz ustawić
-        };
-        _context.Profiles.Add(defaultProfile);
-        await _context.SaveChangesAsync(); // Zapisz profil w bazie
+        ModelState.AddModelError("", "Nie znaleziono wybranego profilu.");
+        return View();  // Możesz przekazać błędy do widoku, jeśli nie ma takiego profilu
     }
 
-    // Jeśli tego filmu nie ma jeszcze w bazie, dodajemy
+    // Jeśli tego filmu nie ma jeszcze w bazie, dodajemy go
     if (!_context.Videos.Any(v => v.VideoId == videoId))
     {
         var favoriteVideo = new Video
@@ -107,16 +165,17 @@ public async Task<IActionResult> AddToFavorites(string videoId, string title, st
             ChannelId = channelId,
             PublishedAt = publishedAt,
             IsFavorite = true,
-            ProfileId = defaultProfile.Id // Przypisujemy domyślny profil do filmu
+            ProfileId = selectedProfile.Id // Przypisujemy wybrany profil do filmu
         };
 
         _context.Videos.Add(favoriteVideo);
         await _context.SaveChangesAsync();
     }
 
-    // Zwracamy JSON z id filmu, który właśnie został dodany (żeby przycisk działał od razu)
+    // Zwracamy JSON z id filmu, który właśnie został dodany
     return Json(new { VideoId = videoId, IsFavorite = true });
 }
+
 
 
         // Usuwanie filmu z ulubionych

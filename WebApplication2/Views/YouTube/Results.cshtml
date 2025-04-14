@@ -11,8 +11,8 @@
     <div class="row">
         @foreach (var video in Model)
         {
-            // Pobieramy listę ID filmów już dodanych do ulubionych
             var isFavorite = ViewData["Favorites"] as List<string> ?? new List<string>();
+            var profiles = ViewData["Profiles"] as List<WebApplication2.Models.Profile>;
 
             <div class="col-md-4 mb-4">
                 <div class="card">
@@ -27,14 +27,30 @@
 
                         @if (!isFavorite.Contains(video.VideoId))
                         {
-                            <!-- Formularz dodania do ulubionych -->
-                            <form id="add-to-favorites-form-@video.VideoId" asp-controller="YouTube" asp-action="AddToFavorites" method="post" class="add-to-favorites-form">
-                                <input type="hidden" name="videoId" value="@video.VideoId" />
-                                <input type="hidden" name="title" value="@video.Title" />
-                                <input type="hidden" name="channelId" value="@video.ChannelId" />
-                                <input type="hidden" name="publishedAt" value="@video.PublishedAt" />
-                                <button type="submit" class="btn btn-warning mt-2">⭐ Dodaj do ulubionych</button>
-                            </form>
+                            if (profiles == null || !profiles.Any())
+                            {
+                                <p class="text-danger">⚠️ Brak dostępnych profili. Utwórz profil, zanim dodasz film do ulubionych.</p>
+                            }
+                            else
+                            {
+                                <!-- Formularz dodania do ulubionych -->
+                                <form id="add-to-favorites-form-@video.VideoId" asp-controller="YouTube" asp-action="AddToFavorites" method="post" class="add-to-favorites-form">
+                                    <input type="hidden" name="videoId" value="@video.VideoId" />
+                                    <input type="hidden" name="title" value="@video.Title" />
+                                    <input type="hidden" name="channelId" value="@video.ChannelId" />
+                                    <input type="hidden" name="publishedAt" value="@video.PublishedAt" />
+
+                                    <label for="profileId">Wybierz profil:</label>
+                                    <select name="profileId" class="form-control">
+                                        @foreach (var profile in profiles)
+                                        {
+                                            <option value="@profile.Id">@profile.Name</option>
+                                        }
+                                    </select>
+
+                                    <button type="submit" class="btn btn-warning mt-2">⭐ Dodaj do ulubionych</button>
+                                </form>
+                            }
                         }
                         else
                         {
@@ -61,7 +77,6 @@
                 url: form.attr("action"),
                 data: form.serialize(),
                 success: function (response) {
-                    // Find the button and update it
                     var button = form.find("button");
                     button.replaceWith('<button class="btn btn-success mt-2" disabled>✅ W ulubionych</button>');
                 },
