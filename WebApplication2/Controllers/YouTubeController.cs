@@ -26,7 +26,7 @@ namespace WebApplication2.Controllers
 
 
 
-        public IActionResult AddToFavoritesForm()
+        public IActionResult AddToFavoritesForm() //trochę shit ale potrzebne jako przekazanie danych przed kolejnymi funkcjami
     {
         // Pobieramy dostępne profile z bazy
         var profiles = _context.Profiles.ToList();
@@ -146,6 +146,19 @@ public IActionResult CreateProfile()
 [HttpPost]
 public async Task<IActionResult> AddToFavorites(string videoId, string title, string channelId, DateTime publishedAt, int profileId)
 {
+    if (string.IsNullOrWhiteSpace(videoId) || videoId.Length > 20)  //walidacja danych
+        ModelState.AddModelError("videoId", "Nieprawidłowy identyfikator filmu.");
+
+    if (string.IsNullOrWhiteSpace(title) || title.Length > 100)
+        ModelState.AddModelError("title", "Tytuł jest wymagany i może mieć maks. 100 znaków.");
+
+    if (string.IsNullOrWhiteSpace(channelId) || channelId.Length > 50)
+        ModelState.AddModelError("channelId", "Nieprawidłowy identyfikator kanału.");
+
+    if (publishedAt > DateTime.Now)
+        ModelState.AddModelError("publishedAt", "Data publikacji nie może być w przyszłości.");
+
+
     // Sprawdzamy, czy wybrany profil istnieje w bazie
     var selectedProfile = await _context.Profiles.FindAsync(profileId);
 
