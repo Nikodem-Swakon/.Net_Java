@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 //  Konfiguracja połączenia z bazą danych SQLite
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 //  Rejestrujemy serwis YouTubeApiService (wstrzykiwany w kontrolerach)
 builder.Services.AddScoped<YouTubeApiService>();
