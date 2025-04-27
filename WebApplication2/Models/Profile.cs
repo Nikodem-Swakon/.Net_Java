@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 namespace WebApplication2.Models
 {
+    /// <summary>
+    /// Model reprezentujący profil użytkownika.
+    /// </summary>
     public class Profile
     { //[Required] dodane jako walidacja danych 
         [Required] public int Id { get; set; }

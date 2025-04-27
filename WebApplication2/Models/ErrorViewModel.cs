@@ -1,6 +1,10 @@
 namespace WebApplication2.Models
 {
     // Model widoku błędu – używany do przekazywania informacji o błędach do widoku
+
+    /// <summary>
+    /// Model reprezentujący widok błędu.
+    /// </summary>
     public class ErrorViewModel
     {
         // Identyfikator żądania (Request ID), może być null

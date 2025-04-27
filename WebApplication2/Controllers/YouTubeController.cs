@@ -25,7 +25,10 @@ namespace WebApplication2.Controllers
 
 
 
-
+/// <summary>
+/// Zaczytywanie profili
+/// </summary>
+/// <returns>profile</returns>
         public IActionResult AddToFavoritesForm() //trochę shit ale potrzebne jako przekazanie danych przed kolejnymi funkcjami
     {
         // Pobieramy dostępne profile z bazy
@@ -37,7 +40,10 @@ namespace WebApplication2.Controllers
         return View();
     }
 
-
+/// <summary>
+/// Zliczanie filmów na profilu
+/// </summary>
+/// <returns>profile z ilością filmów na nich zapisanych</returns>
 public IActionResult ManageProfiles()
 {
     var profiles = _context.Profiles
@@ -54,7 +60,11 @@ public IActionResult ManageProfiles()
     return View();
 }
 
-
+/// <summary>
+/// Usuwanie profilu
+/// </summary>
+/// <param name="profileId"></param>
+/// <returns></returns>
 [HttpPost]
 public async Task<IActionResult> DeleteProfile(int profileId)
 {
@@ -75,6 +85,11 @@ public async Task<IActionResult> DeleteProfile(int profileId)
 
 
         // Akcja do utworzenia nowego profilu
+        /// <summary>
+        /// Tworzenie nowego profilu
+        /// </summary>
+        /// <param name="profileName"></param>
+        /// <returns></returns>
 [HttpPost]
 public async Task<IActionResult> CreateProfile(string profileName)
 {
@@ -129,6 +144,11 @@ public IActionResult CreateProfile()
 
 
         // Wyszukiwanie filmów z YouTube na podstawie zapytania
+        /// <summary>
+        /// Wyszukiwanie filmów na YouTube
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns>Filmy z yt</returns>
         public async Task<IActionResult> Search(string query)
         {
             var videos = await _youTubeApiService.SearchVideosAsync(query); // pobranie filmów z API
@@ -144,6 +164,18 @@ public IActionResult CreateProfile()
 
         // Dodawanie filmu do ulubionych (zapis do bazy)
 [HttpPost]
+
+
+
+/// <summary>
+/// Dodawanie filmu do ulubionych
+/// </summary>
+/// <param name="videoId"></param>
+/// <param name="title"></param>
+/// <param name="channelId"></param>
+/// <param name="publishedAt"></param>
+/// <param name="profileId"></param>
+/// <returns>JSONz id filmu (żeby było od razu widać czy jest dodany do ulubionych czy nie)</returns>
 public async Task<IActionResult> AddToFavorites(string videoId, string title, string channelId, DateTime publishedAt, int profileId)
 {
     if (string.IsNullOrWhiteSpace(videoId) || videoId.Length > 20)  //walidacja danych
@@ -192,6 +224,12 @@ public async Task<IActionResult> AddToFavorites(string videoId, string title, st
 
 
         // Usuwanie filmu z ulubionych
+
+        /// <summary>
+        /// Usuwanie filmu z ulubionych
+        /// </summary>
+        /// <param name="videoId"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> RemoveFromFavorites(string videoId)
         {
@@ -206,6 +244,13 @@ public async Task<IActionResult> AddToFavorites(string videoId, string title, st
         }
 
         // Widok ulubionych filmów
+
+        /// <summary>
+        /// Widok ulubionych filmów
+        /// </summary>
+        /// <param name="profileId"></param>
+        /// <param name="searchQuery"></param>
+        /// <returns>Ulubione filmiki</returns>
        public IActionResult Favorites(int? profileId, string searchQuery)
 {
     var videos = _context.Videos

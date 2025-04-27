@@ -19,6 +19,14 @@ namespace WebApplication2.Services
         }
 
         //  Metoda asynchroniczna do wyszukiwania filmów po zapytaniu tekstowym
+
+        /// <summary>
+        /// Wyszukiwanie filmów na YouTube na podstawie zapytania tekstowego.
+        /// Metoda asynchroniczna, która zwraca listę obiektów Video.
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns>lista obiektów video</returns>
+        /// <exception cref="Exception"></exception>
         public async Task<List<Video>> SearchVideosAsync(string query)
         {
             // Inicjalizacja klienta YouTube API
@@ -36,6 +44,12 @@ namespace WebApplication2.Services
             // Wysyłamy zapytanie do API
             var searchResponse = await searchRequest.ExecuteAsync();
             var videos = new List<Video>();
+
+            //sprawdzamy, czy odpowiedź z API jest poprawna
+            if (searchResponse == null || searchResponse.Items == null || !searchResponse.Items.Any())
+            {
+                throw new Exception("Brak wyników wyszukiwania lub błąd odpowiedzi z YouTube API.");
+            }
 
             // Przetwarzamy odpowiedź z API
             foreach (var result in searchResponse.Items)
