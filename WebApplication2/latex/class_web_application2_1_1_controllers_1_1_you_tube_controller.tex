@@ -1,0 +1,206 @@
+\doxysection{Web\+Application2\+::Controllers\+::You\+Tube\+Controller Class Reference}
+\hypertarget{class_web_application2_1_1_controllers_1_1_you_tube_controller}{}\label{class_web_application2_1_1_controllers_1_1_you_tube_controller}\index{WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}}
+Inheritance diagram for Web\+Application2\+::Controllers\+::You\+Tube\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_web_application2_1_1_controllers_1_1_you_tube_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_web_application2_1_1_controllers_1_1_you_tube_controller_ab99d2124807f5f26952db7a7d29ed339}{You\+Tube\+Controller}} (You\+Tube\+Api\+Service you\+Tube\+Api\+Service, Application\+Db\+Context context, ILogger$<$ \mbox{\hyperlink{class_web_application2_1_1_controllers_1_1_you_tube_controller}{You\+Tube\+Controller}} $>$ logger)
+\item 
+IAction\+Result \mbox{\hyperlink{class_web_application2_1_1_controllers_1_1_you_tube_controller_a4a096265b4962c8439237a34cf8d5d17}{Add\+To\+Favorites\+Form}} ()
+\begin{DoxyCompactList}\small\item\em Zaczytywanie profili. \end{DoxyCompactList}\item 
+IAction\+Result \mbox{\hyperlink{class_web_application2_1_1_controllers_1_1_you_tube_controller_af9ef2cc0d69b3d42dfb38f44a28b996c}{Manage\+Profiles}} ()
+\begin{DoxyCompactList}\small\item\em Zliczanie filmów na profilu. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_web_application2_1_1_controllers_1_1_you_tube_controller_a0c4c53099a29a1e3874b0249ca6bc7e1}{Delete\+Profile}} (int profile\+Id)
+\begin{DoxyCompactList}\small\item\em Usuwanie profilu. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_web_application2_1_1_controllers_1_1_you_tube_controller_a378a5704d4b6f78935e942c2c1657aa8}{Create\+Profile}} (string profile\+Name)
+\begin{DoxyCompactList}\small\item\em Tworzenie nowego profilu. \end{DoxyCompactList}\item 
+IAction\+Result \mbox{\hyperlink{class_web_application2_1_1_controllers_1_1_you_tube_controller_ad51ac37907194d25c1ef94fb531248ab}{Index}} ()
+\item 
+IAction\+Result \mbox{\hyperlink{class_web_application2_1_1_controllers_1_1_you_tube_controller_a2ecd395677e7fea9922b3ac02ee185ce}{Create\+Profile}} ()
+\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_web_application2_1_1_controllers_1_1_you_tube_controller_a05d8639e205c839543317d4c56b89200}{Search}} (string query)
+\begin{DoxyCompactList}\small\item\em Wyszukiwanie filmów na You\+Tube. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_web_application2_1_1_controllers_1_1_you_tube_controller_ad5f8454627c0017363ba880004b6a42a}{Add\+To\+Favorites}} (string video\+Id, string title, string channel\+Id, Date\+Time published\+At, int profile\+Id)
+\begin{DoxyCompactList}\small\item\em Dodawanie filmu do ulubionych. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_web_application2_1_1_controllers_1_1_you_tube_controller_a724434480e9b4fd306bbbbf938df4478}{Remove\+From\+Favorites}} (string video\+Id)
+\begin{DoxyCompactList}\small\item\em Usuwanie filmu z ulubionych. \end{DoxyCompactList}\item 
+IAction\+Result \mbox{\hyperlink{class_web_application2_1_1_controllers_1_1_you_tube_controller_a253a3ca613ea40c60305814ab421c887}{Favorites}} (int? profile\+Id, string search\+Query)
+\begin{DoxyCompactList}\small\item\em Widok ulubionych filmów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_web_application2_1_1_controllers_1_1_you_tube_controller_ab99d2124807f5f26952db7a7d29ed339}\index{WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}!YouTubeController@{YouTubeController}}
+\index{YouTubeController@{YouTubeController}!WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}}
+\doxysubsubsection{\texorpdfstring{YouTubeController()}{YouTubeController()}}
+{\footnotesize\ttfamily \label{class_web_application2_1_1_controllers_1_1_you_tube_controller_ab99d2124807f5f26952db7a7d29ed339} 
+Web\+Application2\+::\+Controllers\+::\+You\+Tube\+Controller\+::\+You\+Tube\+Controller (\begin{DoxyParamCaption}\item[{You\+Tube\+Api\+Service}]{you\+Tube\+Api\+Service}{, }\item[{Application\+Db\+Context}]{context}{, }\item[{ILogger$<$ \mbox{\hyperlink{class_web_application2_1_1_controllers_1_1_you_tube_controller}{You\+Tube\+Controller}} $>$}]{logger}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_web_application2_1_1_controllers_1_1_you_tube_controller_ad5f8454627c0017363ba880004b6a42a}\index{WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}!AddToFavorites@{AddToFavorites}}
+\index{AddToFavorites@{AddToFavorites}!WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}}
+\doxysubsubsection{\texorpdfstring{AddToFavorites()}{AddToFavorites()}}
+{\footnotesize\ttfamily \label{class_web_application2_1_1_controllers_1_1_you_tube_controller_ad5f8454627c0017363ba880004b6a42a} 
+async Task$<$ IAction\+Result $>$ Web\+Application2\+::\+Controllers\+::\+You\+Tube\+Controller\+::\+Add\+To\+Favorites (\begin{DoxyParamCaption}\item[{string}]{video\+Id}{, }\item[{string}]{title}{, }\item[{string}]{channel\+Id}{, }\item[{Date\+Time}]{published\+At}{, }\item[{int}]{profile\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Dodawanie filmu do ulubionych. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em video\+Id} & \\
+\hline
+{\em title} & \\
+\hline
+{\em channel\+Id} & \\
+\hline
+{\em published\+At} & \\
+\hline
+{\em profile\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+JSONz id filmu (żeby było od razu widać czy jest dodany do ulubionych czy nie)
+\end{DoxyReturn}
+\Hypertarget{class_web_application2_1_1_controllers_1_1_you_tube_controller_a4a096265b4962c8439237a34cf8d5d17}\index{WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}!AddToFavoritesForm@{AddToFavoritesForm}}
+\index{AddToFavoritesForm@{AddToFavoritesForm}!WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}}
+\doxysubsubsection{\texorpdfstring{AddToFavoritesForm()}{AddToFavoritesForm()}}
+{\footnotesize\ttfamily \label{class_web_application2_1_1_controllers_1_1_you_tube_controller_a4a096265b4962c8439237a34cf8d5d17} 
+IAction\+Result Web\+Application2\+::\+Controllers\+::\+You\+Tube\+Controller\+::\+Add\+To\+Favorites\+Form (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Zaczytywanie profili. 
+
+\begin{DoxyReturn}{Returns}
+profile
+\end{DoxyReturn}
+\Hypertarget{class_web_application2_1_1_controllers_1_1_you_tube_controller_a2ecd395677e7fea9922b3ac02ee185ce}\index{WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}!CreateProfile@{CreateProfile}}
+\index{CreateProfile@{CreateProfile}!WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}}
+\doxysubsubsection{\texorpdfstring{CreateProfile()}{CreateProfile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_web_application2_1_1_controllers_1_1_you_tube_controller_a2ecd395677e7fea9922b3ac02ee185ce} 
+IAction\+Result Web\+Application2\+::\+Controllers\+::\+You\+Tube\+Controller\+::\+Create\+Profile (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_web_application2_1_1_controllers_1_1_you_tube_controller_a378a5704d4b6f78935e942c2c1657aa8}\index{WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}!CreateProfile@{CreateProfile}}
+\index{CreateProfile@{CreateProfile}!WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}}
+\doxysubsubsection{\texorpdfstring{CreateProfile()}{CreateProfile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_web_application2_1_1_controllers_1_1_you_tube_controller_a378a5704d4b6f78935e942c2c1657aa8} 
+async Task$<$ IAction\+Result $>$ Web\+Application2\+::\+Controllers\+::\+You\+Tube\+Controller\+::\+Create\+Profile (\begin{DoxyParamCaption}\item[{string}]{profile\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Tworzenie nowego profilu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em profile\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_web_application2_1_1_controllers_1_1_you_tube_controller_a0c4c53099a29a1e3874b0249ca6bc7e1}\index{WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}!DeleteProfile@{DeleteProfile}}
+\index{DeleteProfile@{DeleteProfile}!WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}}
+\doxysubsubsection{\texorpdfstring{DeleteProfile()}{DeleteProfile()}}
+{\footnotesize\ttfamily \label{class_web_application2_1_1_controllers_1_1_you_tube_controller_a0c4c53099a29a1e3874b0249ca6bc7e1} 
+async Task$<$ IAction\+Result $>$ Web\+Application2\+::\+Controllers\+::\+You\+Tube\+Controller\+::\+Delete\+Profile (\begin{DoxyParamCaption}\item[{int}]{profile\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Usuwanie profilu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em profile\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_web_application2_1_1_controllers_1_1_you_tube_controller_a253a3ca613ea40c60305814ab421c887}\index{WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}!Favorites@{Favorites}}
+\index{Favorites@{Favorites}!WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}}
+\doxysubsubsection{\texorpdfstring{Favorites()}{Favorites()}}
+{\footnotesize\ttfamily \label{class_web_application2_1_1_controllers_1_1_you_tube_controller_a253a3ca613ea40c60305814ab421c887} 
+IAction\+Result Web\+Application2\+::\+Controllers\+::\+You\+Tube\+Controller\+::\+Favorites (\begin{DoxyParamCaption}\item[{int?}]{profile\+Id}{, }\item[{string}]{search\+Query}{}\end{DoxyParamCaption})}
+
+
+
+Widok ulubionych filmów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em profile\+Id} & \\
+\hline
+{\em search\+Query} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ulubione filmiki
+\end{DoxyReturn}
+\Hypertarget{class_web_application2_1_1_controllers_1_1_you_tube_controller_ad51ac37907194d25c1ef94fb531248ab}\index{WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}!Index@{Index}}
+\index{Index@{Index}!WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily \label{class_web_application2_1_1_controllers_1_1_you_tube_controller_ad51ac37907194d25c1ef94fb531248ab} 
+IAction\+Result Web\+Application2\+::\+Controllers\+::\+You\+Tube\+Controller\+::\+Index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_web_application2_1_1_controllers_1_1_you_tube_controller_af9ef2cc0d69b3d42dfb38f44a28b996c}\index{WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}!ManageProfiles@{ManageProfiles}}
+\index{ManageProfiles@{ManageProfiles}!WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}}
+\doxysubsubsection{\texorpdfstring{ManageProfiles()}{ManageProfiles()}}
+{\footnotesize\ttfamily \label{class_web_application2_1_1_controllers_1_1_you_tube_controller_af9ef2cc0d69b3d42dfb38f44a28b996c} 
+IAction\+Result Web\+Application2\+::\+Controllers\+::\+You\+Tube\+Controller\+::\+Manage\+Profiles (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Zliczanie filmów na profilu. 
+
+\begin{DoxyReturn}{Returns}
+profile z ilością filmów na nich zapisanych
+\end{DoxyReturn}
+\Hypertarget{class_web_application2_1_1_controllers_1_1_you_tube_controller_a724434480e9b4fd306bbbbf938df4478}\index{WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}!RemoveFromFavorites@{RemoveFromFavorites}}
+\index{RemoveFromFavorites@{RemoveFromFavorites}!WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}}
+\doxysubsubsection{\texorpdfstring{RemoveFromFavorites()}{RemoveFromFavorites()}}
+{\footnotesize\ttfamily \label{class_web_application2_1_1_controllers_1_1_you_tube_controller_a724434480e9b4fd306bbbbf938df4478} 
+async Task$<$ IAction\+Result $>$ Web\+Application2\+::\+Controllers\+::\+You\+Tube\+Controller\+::\+Remove\+From\+Favorites (\begin{DoxyParamCaption}\item[{string}]{video\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Usuwanie filmu z ulubionych. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em video\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_web_application2_1_1_controllers_1_1_you_tube_controller_a05d8639e205c839543317d4c56b89200}\index{WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}!Search@{Search}}
+\index{Search@{Search}!WebApplication2::Controllers::YouTubeController@{WebApplication2::Controllers::YouTubeController}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily \label{class_web_application2_1_1_controllers_1_1_you_tube_controller_a05d8639e205c839543317d4c56b89200} 
+async Task$<$ IAction\+Result $>$ Web\+Application2\+::\+Controllers\+::\+You\+Tube\+Controller\+::\+Search (\begin{DoxyParamCaption}\item[{string}]{query}{}\end{DoxyParamCaption})}
+
+
+
+Wyszukiwanie filmów na You\+Tube. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Filmy z yt
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Controllers/\mbox{\hyperlink{_you_tube_controller_8cs}{You\+Tube\+Controller.\+cs}}\end{DoxyCompactItemize}

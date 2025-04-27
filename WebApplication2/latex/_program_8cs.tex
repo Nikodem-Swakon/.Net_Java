@@ -1,0 +1,94 @@
+\doxysection{Program.\+cs File Reference}
+\hypertarget{_program_8cs}{}\label{_program_8cs}\index{Program.cs@{Program.cs}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}} Services \mbox{\hyperlink{_program_8cs_ae8ceb44b68075733be3d1d41203f7b53}{Add\+Db\+Context$<$ Application\+Db\+Context $>$}} (options=$>$ options.\+Use\+Sql\+Server(builder.\+Configuration.\+Get\+Connection\+String("{}Default\+Connection"{})))
+\item 
+\mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}} Services \mbox{\hyperlink{_program_8cs_ad573e446a33c6b2288916ec7d703e9ed}{Add\+Scoped$<$ You\+Tube\+Api\+Service $>$}} ()
+\item 
+\mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}} Services \mbox{\hyperlink{_program_8cs_ab0a8c21803d8a85b072a22a754620f25}{Add\+Controllers\+With\+Views}} ()
+\item 
+\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} Urls \mbox{\hyperlink{_program_8cs_a59103095181ece4e2d3a804ab6ea4a8b}{Add}} ("{}http\+://0.\+0.\+0.\+0\+:80"{})
+\item 
+\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{_program_8cs_a4ea1ee83de9c1950d93f3814c746155c}{Use\+Routing}} ()
+\item 
+\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{_program_8cs_aee15d952b351633e37db07ef3357d634}{Use\+Authorization}} ()
+\item 
+\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{_program_8cs_ae45cfe41a0f98ed4b86a2e30951e0007}{Map\+Controller\+Route}} (name\+:"{}default"{}, pattern\+:"{}\{controller=You\+Tube\}/\{action=Index\}/\{id?\}"{})
+\item 
+\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{_program_8cs_a7ee0a144abc670424fca988202e1779f}{Run}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}} = Web\+Application.\+Create\+Builder(args)
+\item 
+var \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} = builder.\+Build()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_program_8cs_a59103095181ece4e2d3a804ab6ea4a8b}\index{Program.cs@{Program.cs}!Add@{Add}}
+\index{Add@{Add}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \label{_program_8cs_a59103095181ece4e2d3a804ab6ea4a8b} 
+\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} Urls Add (\begin{DoxyParamCaption}\item[{"{}http\+://0.\+0.\+0.\+0\+:80"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_ab0a8c21803d8a85b072a22a754620f25}\index{Program.cs@{Program.cs}!AddControllersWithViews@{AddControllersWithViews}}
+\index{AddControllersWithViews@{AddControllersWithViews}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddControllersWithViews()}{AddControllersWithViews()}}
+{\footnotesize\ttfamily \label{_program_8cs_ab0a8c21803d8a85b072a22a754620f25} 
+\mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}} Services Add\+Controllers\+With\+Views (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_ae8ceb44b68075733be3d1d41203f7b53}\index{Program.cs@{Program.cs}!AddDbContext$<$ ApplicationDbContext $>$@{AddDbContext$<$ ApplicationDbContext $>$}}
+\index{AddDbContext$<$ ApplicationDbContext $>$@{AddDbContext$<$ ApplicationDbContext $>$}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddDbContext$<$ ApplicationDbContext $>$()}{AddDbContext< ApplicationDbContext >()}}
+{\footnotesize\ttfamily \label{_program_8cs_ae8ceb44b68075733be3d1d41203f7b53} 
+\mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}} Services Add\+Db\+Context$<$ Application\+Db\+Context $>$ (\begin{DoxyParamCaption}\item[{options}]{}{, }\item[{options.}]{Use\+Sql\+Server}{builder.\+Configuration.\+Get\+Connection\+String("{}\+Default\+Connection"{})}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_ad573e446a33c6b2288916ec7d703e9ed}\index{Program.cs@{Program.cs}!AddScoped$<$ YouTubeApiService $>$@{AddScoped$<$ YouTubeApiService $>$}}
+\index{AddScoped$<$ YouTubeApiService $>$@{AddScoped$<$ YouTubeApiService $>$}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddScoped$<$ YouTubeApiService $>$()}{AddScoped< YouTubeApiService >()}}
+{\footnotesize\ttfamily \label{_program_8cs_ad573e446a33c6b2288916ec7d703e9ed} 
+\mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}} Services Add\+Scoped$<$ You\+Tube\+Api\+Service $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_ae45cfe41a0f98ed4b86a2e30951e0007}\index{Program.cs@{Program.cs}!MapControllerRoute@{MapControllerRoute}}
+\index{MapControllerRoute@{MapControllerRoute}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{MapControllerRoute()}{MapControllerRoute()}}
+{\footnotesize\ttfamily \label{_program_8cs_ae45cfe41a0f98ed4b86a2e30951e0007} 
+\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} Map\+Controller\+Route (\begin{DoxyParamCaption}\item[{name\+:"{}default"{}}]{}{, }\item[{pattern\+:"{}\{controller=You\+Tube\}/\{action=Index\}/\{id?\}"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a7ee0a144abc670424fca988202e1779f}\index{Program.cs@{Program.cs}!Run@{Run}}
+\index{Run@{Run}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{_program_8cs_a7ee0a144abc670424fca988202e1779f} 
+\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_aee15d952b351633e37db07ef3357d634}\index{Program.cs@{Program.cs}!UseAuthorization@{UseAuthorization}}
+\index{UseAuthorization@{UseAuthorization}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{UseAuthorization()}{UseAuthorization()}}
+{\footnotesize\ttfamily \label{_program_8cs_aee15d952b351633e37db07ef3357d634} 
+\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} Use\+Authorization (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a4ea1ee83de9c1950d93f3814c746155c}\index{Program.cs@{Program.cs}!UseRouting@{UseRouting}}
+\index{UseRouting@{UseRouting}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{UseRouting()}{UseRouting()}}
+{\footnotesize\ttfamily \label{_program_8cs_a4ea1ee83de9c1950d93f3814c746155c} 
+\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} Use\+Routing (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}\index{Program.cs@{Program.cs}!app@{app}}
+\index{app@{app}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily \label{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d} 
+var app = builder.\+Build()}
+
+\Hypertarget{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}\index{Program.cs@{Program.cs}!builder@{builder}}
+\index{builder@{builder}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{builder}{builder}}
+{\footnotesize\ttfamily \label{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5} 
+var builder = Web\+Application.\+Create\+Builder(args)}
+
